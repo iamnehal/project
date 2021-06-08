@@ -14,7 +14,7 @@ app.use('/posts', postRoutes);
 app.get('/',(req,res)=>
 {
 
-res.send('Hello to memories APP')
+res.send('Hello to memories APP');
 
 
 }
