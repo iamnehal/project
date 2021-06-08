@@ -11,7 +11,14 @@ app.use(express.json({ limit: '30mb', extended: true }))
 app.use(express.urlencoded({ limit: '30mb', extended: true }))
 
 app.use('/posts', postRoutes);
+app.get('/',(req,res)=>
+{
 
+res.send('Hello to memories APP')
+
+
+}
+);
 
 const CONNECTION_URL = 'mongodb+srv://nehalchandra:niku22021998@cluster0.7kvvz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 3000;
