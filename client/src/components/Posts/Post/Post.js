@@ -7,7 +7,7 @@ import useStyles from './styles';
 import moment from 'moment';
 import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-const Post =({post} ) =>
+const Post =({post,setCurrentId} ) =>
 {const classes=useStyles();
 
     return (
@@ -26,8 +26,9 @@ const Post =({post} ) =>
       <div className={classes.details}>
         <Typography variant="body2" color="textSecondary" component="h2">{post.tags.map((tag) => `#${tag} `)}</Typography>
       </div>
+      <Typography className={classes.title} gutterBottom variant="h5" component="h2">{post.title}</Typography>
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">{post.message}</Typography>
+      <Typography variant="h5" color="Secondary" component="p">{post.message}</Typography>
       </CardContent>
 
       <CardActions className={classes.cardActions}>
